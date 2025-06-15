@@ -254,7 +254,7 @@
     <p class="text-muted fst-italic">A magical journey powered by imagination & AI</p>
   </div>
 
-  {% if pages and images %}
+  {% if pages  %}
     <div class="position-relative turn-page-wrapper">
       <div class="hover-arrow hover-left d-none d-md-block" id="hover-prev"><i class="bi bi-chevron-left"></i></div>
       <div class="hover-arrow hover-right d-none d-md-block" id="hover-next"><i class="bi bi-chevron-right"></i></div>
@@ -263,7 +263,7 @@
         {% for i in range(pages|length) %}
           <div class="page-container border-end">
             <div class="page">
-              <img src="{{ images[i] }}" alt="Page Image">
+              <img src="images/about1.jpg" alt="Page Image">
             </div>
           </div>
           <div class="page-container">

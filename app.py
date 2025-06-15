@@ -117,12 +117,12 @@ def split_text(text, max_chars):
 @app.route("/storybook")
 def storybook():
     pages, images = [], []
-    if os.path.exists(STORY_JSON_PATH) and os.path.exists(IMAGES_JSON_PATH):
+    if os.path.exists(STORY_JSON_PATH):
         with open(STORY_JSON_PATH) as f:
             pages = json.load(f)
-        with open(IMAGES_JSON_PATH) as f:
-            images = json.load(f)
-    return render_template("story_detail.html", pages=pages, images=images)
+        # with open(IMAGES_JSON_PATH) as f:
+        #     images = json.load(f)
+    return render_template("story_detail.html", pages=pages)
 
 def split_story_into_pages(story_text, max_chars_per_page=500):
     words = story_text.split()
